@@ -6,14 +6,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class RunnerService {
-    @Value("${load.param.period}/${load.param.requestsPerSecond}")
+    @Value("${load.param.time}")
     private Integer period;
 
-    @Value("${load.param.requestsPerSecond}")
-    private Integer requestsPerSecond;
-
-    @Scheduled(initialDelayString = "1000")
-    public void loadTrigger(int period, int req) {
+    @Scheduled(initialDelayString = "#{1000/${load.param.requestsPerSecond}}")
+    public void loadTrigger() {
         System.out.println("===== " + System.currentTimeMillis());
     }
 }
