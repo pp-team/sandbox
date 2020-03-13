@@ -1,3 +1,6 @@
 .idea
 /*.iml
 /server/.mvn
+/mock-server/*.gitignore
+/loader-app/.mvn
+/mock-server-app/.mvn
