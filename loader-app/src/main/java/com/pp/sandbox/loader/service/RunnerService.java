@@ -1,11 +1,19 @@
 package com.pp.sandbox.loader.service;
 
-import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class RunnerService {
+    @Value("${load.param.period}/${load.param.requestsPerSecond}")
+    private Integer period;
 
-    public void runLoad(int period, int req) {
+    @Value("${load.param.requestsPerSecond}")
+    private Integer requestsPerSecond;
 
+    @Scheduled(initialDelayString = "1000")
+    public void loadTrigger(int period, int req) {
+        System.out.println("===== " + System.currentTimeMillis());
     }
 }
