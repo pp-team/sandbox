@@ -11,6 +11,8 @@
     <modules>
         <module>mock-server-app</module>
         <module>server-app</module>
+        <module>loader-app</module>
+
     </modules>
 
 </project>

@@ -16,7 +16,7 @@ public class LoaderApplication {
         appContext = SpringApplication.run(LoaderApplication.class, args);
     }
 
-    @Scheduled(fixedDelayString = "${load.time.period:10}000")
+    @Scheduled(fixedDelay= 10)
     private void closeApplication() {
         if(appContext != null) {
             ((ConfigurableApplicationContext) appContext).close();
