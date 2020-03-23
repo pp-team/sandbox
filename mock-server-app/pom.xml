@@ -11,7 +11,7 @@
     <groupId>com.pp.sandbox</groupId>
     <artifactId>mock-server-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>mock-server-app</name>
     <description>Demo project for Spring Boot</description>
 
