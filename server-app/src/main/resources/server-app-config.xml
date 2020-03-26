@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="serviceExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="${serviceExecutor.pool.corePoolSize}"/>
+        <property name="maxPoolSize" value="${serviceExecutor.pool.maxPoolSize}"/>
+        <property name="threadNamePrefix" value="${serviceExecutor.pool.threadNamePrefix}"/>
+    </bean>
+
+</beans>
